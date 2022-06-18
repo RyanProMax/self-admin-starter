@@ -1,0 +1,29 @@
+$--colors: (
+  "primary": ("base": #ef4444),
+);
+
+// You should use them in scss, because we calculate it by sass.
+// comment next lines to use default color
+@forward "element-plus/theme-chalk/src/common/var.scss" with ( // do not use same name, it will override.
+  $colors: $--colors,
+  $button-padding-horizontal: ("default": 50px));
+
+// custom dark variables
+@use "./dark.scss";
+// import dark theme
+@use "element-plus/theme-chalk/src/dark/css-vars.scss" as *;
+
+// if you want to import all
+@use "element-plus/theme-chalk/src/var.scss" as *;
+
+@mixin font--primary {
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 100;
+}
+
+@mixin flex($direction: row, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}

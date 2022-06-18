@@ -1,0 +1,11 @@
+@use './reset.scss' as *;
+
+html {
+  body {
+    @include font--primary();
+  }
+
+  &.dark {
+    background: var(--el-color-black);
+  }
+}
