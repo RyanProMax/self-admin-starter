@@ -1,0 +1,13 @@
+.fade-slide {
+
+  &-enter-active,
+  &-leave-active {
+    transition: all 0.25s ease-out;
+  }
+
+  &-enter-from,
+  &-leave-to {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+}
